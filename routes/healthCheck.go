@@ -5,7 +5,7 @@ import (
 	"go-fiber-example/controller/healthCheck"
 )
 
-func RegisterHealthCheckRoute(router *fiber.Router) {
+func RegisterHealthCheckRouter(router *fiber.Router) {
 	r := *router // router pointer
 	r.Get("/", healthCheck.GetHealthCheck)
 }

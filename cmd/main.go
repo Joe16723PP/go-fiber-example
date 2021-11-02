@@ -21,9 +21,11 @@ func main() {
 	// init go fiber app
 	app := server.InitApp()
 	// grouping route
-	apiV1 := app.Group("/v1")
-	// register health check route
-	routes.RegisterHealthCheckRoute(&apiV1)
+	apiV1 := app.Group("/v1") // versioning
+	userRouter := apiV1.Group("/user")
+	// register router
+	routes.RegisterHealthCheckRouter(&apiV1)
+	routes.RegisterUserRouter(&userRouter)
 
 	// listen on port 3000
 	log.Fatalf(app.Listen(":3000").Error())
