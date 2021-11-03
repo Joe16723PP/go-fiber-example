@@ -1,6 +1,6 @@
 # go-fiber-example
 
-project structure for go with go fiber library
+project structure for go with go-fiber library
 
 tools 
  - go fiber v2
@@ -8,5 +8,5 @@ tools
  - gorm
  - gorm sql driver
 
-to run this project \n
+to run this project
  `go run cmd/main.go`
